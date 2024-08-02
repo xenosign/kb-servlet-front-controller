@@ -38,7 +38,6 @@ public class FrontControllerServlet extends HttpServlet {
 
         if (controller != null) {
             String viewName = controller.getView(request, response);
-            System.out.println("viewName = " + viewName);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/views/" + viewName + ".jsp");
             dispatcher.forward(request, response);
         } else {
